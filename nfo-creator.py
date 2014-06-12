@@ -22,11 +22,11 @@ def handle_concert(dirname, artist, date, venue, city):
 </musicvideo>
 """.format(venue, city, date, artist)
 
-    # create a file called 'nfo' in the directory. Fix this to be
-    # whatever you want it to be.
+    nfo_file = "[{}] {}, {}.nfo".format(date, venue, city)
+
     # when the with statement is done the file is closed and fully
     # written.
-    with open(os.path.join(dirname, "nfo"), "w") as fp:
+    with open(os.path.join(dirname, nfo_file), "w") as fp:
         fp.write(nfo_data)
 
 
