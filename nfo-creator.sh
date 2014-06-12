@@ -14,14 +14,14 @@ concert(){
   echo "Ort: " $concert_location
 }
 
-songname(){
-  searchFolder="$@"
-  song=`find "$searchFolder" -iname "*.avi"`
-  songbase=$(basename "$song")
-  songname="${songbase%.*}"
-  echo "Name des Songs:"
-  echo $songname
-}
+#songname(){
+#  searchFolder="$@"
+#  song=`find "$searchFolder" -iname "*.avi"`
+#  songbase=$(basename "$song")
+#  songname="${songbase%.*}"
+#  echo "Name des Songs:"
+#  echo $songname
+#}
 
 find . -path "*[*" -type d  | while read folder; do # schon angepasst!
         concert $folder
